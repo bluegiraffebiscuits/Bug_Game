@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 const SPEED = 200.0
 const JUMP_VELOCITY = -400.0
 const BULLET = preload("res://Bullet.tscn")
@@ -30,14 +29,11 @@ func _physics_process(delta):
 		shoot()
 		
 	move_and_slide()
-	
+
+# Shoot a bullet
 func shoot():
 	var bullet = BULLET.instantiate()
 	add_child(bullet)
 	bullet.set_global_position(self.get_global_position() + Vector2(10.0, 0.0))
 	print(bullet.position)
 	print(self.position)
-		
-	
-	
-	
