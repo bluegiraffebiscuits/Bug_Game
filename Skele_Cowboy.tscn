@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://0lbql52vmq0q"]
+
+[ext_resource type="PackedScene" uid="uid://bh021n1tgu34c" path="res://Assets/Skeleton_Cowboy.aseprite" id="1_0mb1h"]
+[ext_resource type="Script" path="res://skele_cowboy.gd" id="1_ml4g2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5po7j"]
+size = Vector2(15, 24)
+
+[node name="Skele_Cowboy" type="CharacterBody2D"]
+script = ExtResource("1_ml4g2")
+
+[node name="Skeleton_Cowboy" parent="." instance=ExtResource("1_0mb1h")]
+frame_progress = 0.136573
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 4)
+shape = SubResource("RectangleShape2D_5po7j")

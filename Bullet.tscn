@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccafynbdqn14"]
+
+[ext_resource type="Texture2D" uid="uid://et6mvu6yvva5" path="res://Assets/Bullet.aseprite" id="1_1mr0m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cwhvd"]
+radius = 3.0
+
+[node name="Bullet" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cwhvd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1mr0m")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4rl7j5s0vh8i"]
+
+[ext_resource type="PackedScene" uid="uid://dsodshetddg82" path="res://Assets/Beetle Menace.aseprite" id="1_3a3kf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gdgi3"]
+size = Vector2(19, 24)
+
+[node name="Beetle Menace" type="CharacterBody2D"]
+
+[node name="Beetle Menace" parent="." instance=ExtResource("1_3a3kf")]
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 4)
+shape = SubResource("RectangleShape2D_gdgi3")
